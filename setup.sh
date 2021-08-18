@@ -25,12 +25,15 @@ Description=IPFS Daemon
 ExecStart=/usr/local/bin/ipfs daemon
 daemonUser=rootRestart=alwaysLimitNOFILE=10240
 Environment=\"IPFS_PATH=$1\"
+Restart=on-failure
+RestartSec=5s
 
 [Install]
 WantedBy=multi-user.target" >>/etc/systemd/system/ipfs.service
 sudo systemctl daemon-reload
 sudo systemctl enable ipfs
 sudo systemctl start ipfs
+sleep 10
 
 # Pin files
 echo "Pinning files"
