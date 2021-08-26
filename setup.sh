@@ -23,7 +23,9 @@ Description=IPFS Daemon
 
 [Service]
 ExecStart=/usr/local/bin/ipfs daemon
-daemonUser=rootRestart=alwaysLimitNOFILE=10240
+User=root
+Restart=always
+LimitNOFILE=10240
 Environment=\"IPFS_PATH=$1\"
 Restart=on-failure
 RestartSec=5s
