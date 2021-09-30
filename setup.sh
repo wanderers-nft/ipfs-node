@@ -1,6 +1,6 @@
 # Check if volume exists
 if [ ! -d "$1" ]; then
-  echo "Expected volume in /mnt/$1, but it could not be found. Exiting"
+  echo "Expected volume in $1, but it could not be found. Exiting"
   exit 1
 fi
 
