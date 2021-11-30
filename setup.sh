@@ -14,7 +14,7 @@ fi
 # Download IPFS
 echo "Downloading IPFS"
 wget https://dist.ipfs.io/ipfs-update/v1.7.1/ipfs-update_v1.7.1_linux-amd64.tar.gz
-tar -xvzf ipfs-update_v1.7.1_linux-amd64.tar.gz -c /opt/ipfs/ipfs-update_v1.7.1_linux-amd64 
+tar -xvzf ipfs-update_v1.7.1_linux-amd64.tar.gz -C /opt/ipfs/
 
 sudo bash /opt/ipfs/ipfs-update/install.sh
 ipfs-update --version
